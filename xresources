@@ -1,0 +1,183 @@
+! vim: set filetype=xdefaults :
+
+URxvt.perl-ext-common : default,keyboard-select,url-select,clipboard,font-size
+
+URxvt.keysym.M-x           : perl:keyboard-select:activate
+URxvt.keysym.M-u           : perl:url-select:select_next
+URxvt.keysym.M-c           : perl:clipboard:copy
+URxvt.keysym.M-v           : perl:clipboard:paste
+URxvt.keysym.M-s           : perl:keyboard-select:search
+URxvt.keysym.M-C-v         : perl:clipboard:paste_escaped
+URxvt.url-select.launcher  : firefox
+URxvt.url-select.autocopy  : true
+URxvt.url-select.underline : true
+
+! https://github.com/majutsushi/urxvt-font-size
+URxvt.keysym.C-equal:     perl:font-size:increase
+URxvt.keysym.C-minus:   perl:font-size:decrease
+
+
+!-- URxvt.font        : xft:Terminus:pixelsize=18 --!
+URxvt.font        : xft:Inconsolata:pixelsize=16
+URxvt.termName    : rxvt-256color
+URxvt.iso14755    : false
+
+URxvt.urgentOnBell: true
+
+URxvt.saveLines   : 12000
+URxvt.scrollBar   : false
+URxvt.scrollstyle : rxvt
+
+
+! XFT
+Xft.lcdfilter : lcddefault
+Xft.hintstyle : hintslight
+Xft.hinting   : true
+Xft.antialias : true
+Xft.rgba      : rgb
+Xft.dpi:        100
+
+!Fading
+URxvt.fading    :20
+URxvt.fadeColor : #29303a
+
+!#include "dark.xresources"
+
+! Colors
+! special
+*.foreground:   #a6a28c
+*.background:   #20201d
+*.cursorColor:  #a6a28c
+
+! black
+*.color0:       #20201d
+*.color8:       #7d7a68
+
+! red
+*.color1:       #d73737
+*.color9:       #d73737
+
+! green
+*.color2:       #60ac39
+*.color10:      #60ac39
+
+! yellow
+*.color3:       #cfb017
+*.color11:      #cfb017
+
+! blue
+*.color4:       #6684e1
+*.color12:      #6684e1
+
+! magenta
+*.color5:       #b854d4
+*.color13:      #b854d4
+
+! cyan
+*.color6:       #1fad83
+*.color14:      #1fad83
+
+! white
+*.color7:       #a6a28c
+*.color15:      #fefbec
+
+
+
+
+
+
+
+
+
+
+
+URxvt*scrollWithBuffer: true
+
+
+URxvt.externalBorder: 0
+URxvt.internalBorder: 0
+
+urxvt*depth: 32
+!urxvt*background: rgba:0000/0000/0200/c800
+!urxvt*foreground: [100]#1ea298
+urxvt*borderless: 0
+urxvt*scrollBar:  false
+urxvt*scrollBar_right:      false
+urxvt*saveLines: 5000
+urxvt*tintColor: grey
+urxvt*shading: 15
+URxvt.transparent: true 
+
+uxvt*geometry:                52x20
+
+URxvt.letterSpace: 0.2
+URxvt.lineSpace: 3
+urxvt*cursorBlink:  false
+
+rofi.font:        hermit 12
+rofi.forebackground: #FFFFFF
+rofi.background:     #000000
+
+rofi.opacity:                        80
+rofi.width:                          40
+rofi.lines:                          15
+rofi.columns:                        1
+rofi.fg:                             #FFFFFF
+rofi.bg:                             #000000
+rofi.color-enabled:                  false
+rofi.color-normal:                   #fdf6e3,#002b36,#eee8d5,#586e75,#eee8d5
+rofi.color-urgent:                   #fdf6e3,#dc322f,#eee8d5,#dc322f,#fdf6e3
+rofi.color-active:                   #fdf6e3,#268bd2,#eee8d5,#268bd2,#fdf6e3
+rofi.color-window:                   #fdf6e3,#002b36
+rofi.fg-active:                      #FFFFFF
+rofi.fg-urgent:                      #DC322F
+rofi.hlfg-active:                    #FDF6E3
+rofi.hlfg-urgent:                    #FDF6E3
+rofi.bg-active:                      #000000
+rofi.bg-urgent:                      #000000
+rofi.hlbg-active:                    #268BD2
+rofi.hlbg-urgent:                    #DC322F
+rofi.bgalt:                          #000000
+rofi.hlfg:                           #EEE8D5
+rofi.hlbg:                           #000000
+rofi.bc:                             #002B36
+rofi.bw:                             1
+rofi.location:                       0
+rofi.padding:                        5
+rofi.yoffset:                        0
+rofi.xoffset:                        0
+rofi.fixed-num-lines:                false
+rofi.terminal:                       urxvtc
+rofi.ssh-client:                     ssh
+rofi.ssh-command:                    {terminal} -e {ssh-client} {port} {host}
+rofi.run-command:                    {cmd}
+rofi.run-list-command:               
+rofi.run-shell-command:              {terminal} -e {cmd}
+rofi.disable-history:                false
+rofi.levenshtein-sort:               true
+rofi.case-sensitive:                 false
+rofi.sidebar-mode:                   false
+rofi.lazy-filter-limit:              5000
+rofi.eh:                             1
+rofi.auto-select:                    false
+rofi.parse-hosts:                    false
+rofi.kb-primary-paste:               Control+Shift+v,Shift+Insert
+rofi.kb-secondary-paste:             Control+v,Insert
+rofi.kb-clear-line:                  Control+u
+rofi.kb-move-front:                  Control+a
+rofi.kb-move-end:                    Control+e
+rofi.kb-move-word-back:              Alt+b
+rofi.kb-move-word-forward:           Alt+f
+rofi.kb-move-char-back:              Left,Control+b
+rofi.kb-move-char-forward:           Right,Control+f
+rofi.kb-remove-word-back:            Control+Alt+h
+rofi.kb-remove-word-forward:         Control+Alt+d
+rofi.kb-remove-char-forward:         Delete,Control+d
+rofi.kb-remove-char-back:            BackSpace,Control+h
+rofi.kb-accept-entry:                Control+j,Control+m,Return,KP_Enter
+rofi.kb-accept-custom:               Control+Return
+rofi.kb-accept-entry-continue:       Shift+Return
+rofi.kb-mode-next:                   Shift+Right,Control+Tab
+rofi.kb-mode-previous:               Shift+Left,Control+Shift+Tab
+rofi.kb-toggle-case-sensitivity:     grave,dead_grave
+rofi.kb-delete-entry:                Shift+Delete
