@@ -1,53 +1,128 @@
-uxvt*geometry:                52x20
-urxvt*font:xft:Hermit:pixelsize=18:antialias=true
-urxvt*boldFont:xft:Hermit:pixelsize=18:antialias=true
+! vim: set filetype=xdefaults :
+
+URxvt.perl-ext-common: default,matcher,tabbed,resize-font,-tabbed,keyboard-select,clipboard,font-size
+URxvt.resize-font.smaller: C-Down
+URxvt.resize-font.bigger: C-Up
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
+!URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+!URxvt.perl-ext-common : default,matcher,keyboard-select,url-select,clipboard,font-size
+
+URxvt.keysym.M-x           : perl:keyboard-select:activate
+URxvt.keysym.M-u           : perl:url-select:select_next
+URxvt.keysym.M-c           : perl:clipboard:copy
+URxvt.keysym.M-v           : perl:clipboard:paste
+URxvt.keysym.M-s           : perl:keyboard-select:search
+URxvt.keysym.M-C-v         : perl:clipboard:paste_escaped
+URxvt.url-select.autocopy  : true
+URxvt.url-select.underline : true
+
+! https://github.com/majutsushi/urxvt-font-size
+URxvt.keysym.C-equal:     perl:font-size:increase
+URxvt.keysym.C-minus:   perl:font-size:decrease
+
+
+!-- URxvt.font        : xft:Terminus:pixelsize=18 --!
+URxvt.font        : xft:Inconsolata:pixelsize=16
+URxvt.termName    : rxvt-256color
+URxvt.iso14755    : false
+
+URxvt.urgentOnBell: true
+
+URxvt.saveLines   : 12000
+URxvt.scrollBar   : false
+URxvt.scrollstyle : rxvt
+
+
+! XFT
+Xft.lcdfilter : lcddefault
+Xft.hintstyle : hintslight
+Xft.hinting   : true
+Xft.antialias : true
+Xft.rgba      : rgb
+Xft.dpi:        100
+
+!Fading
+URxvt.fading    :20
+URxvt.fadeColor : #29303a
+
+!#include "dark.xresources"
+
+! Colors
+! special
+*.foreground:   #a6a28c
+*.background:   #20201d
+*.cursorColor:  #a6a28c
+
+! black
+*.color0:       #1c1c1c
+*.color8:       #7d7a68
+
+! red
+*.color1:       #d73737
+*.color9:       #d73737
+
+! green
+*.color2:       #60ac39
+*.color10:      #60ac39
+
+! yellow
+*.color3:       #cfb017
+*.color11:      #cfb017
+
+! blue
+*.color4:       #6684e1
+*.color12:      #6684e1
+
+! magenta
+*.color5:       #b854d4
+*.color13:      #b854d4
+
+! cyan
+*.color6:       #1fad83
+*.color14:      #1fad83
+
+! white
+*.color7:       #a6a28c
+*.color15:      #fefbec
+
+
+
+
+
+
+
+
+
+
+
+URxvt*scrollWithBuffer: true
+
+
+URxvt.externalBorder: 0
+URxvt.internalBorder: 0
+
 urxvt*depth: 32
-urxvt*background: rgba:0000/0000/0200/c800
-urxvt*foreground: [100]#ffffff
-urxvt*borderless: 1
+!urxvt*background: rgba:0000/0000/0200/c800
+!urxvt*foreground: [100]#1ea298
+urxvt*borderless: 0
 urxvt*scrollBar:  false
 urxvt*scrollBar_right:      false
 urxvt*saveLines: 5000
-urxvt*tintColor: grey 
-urxvt*shading: 40 
-urxvt*termName: rxvt-256color
+urxvt*tintColor: grey
+urxvt*shading: 15
+URxvt.transparent: true 
+
+uxvt*geometry:                52x20
+
 URxvt.letterSpace: 0.2
 URxvt.lineSpace: 3
-urxvt*cursorBlink:  true
-urxvt*cursorUnderline: true
-urxvt*cursorColor:  #ececec
-URxvt.internalBorder:   10
-URxvt.background: #3a3a3a
-URxvt.foreground: #f0f0f0
-URxvt.perl-ext-common:  default,matcher,vtwheel
-URxvt.url-launcher:      /usr/bin/google-chrome-stable
-URxvt.matcher.button:   1
+urxvt*cursorBlink:  false
 
-*color0: #121212
-*color8: #2e3436
-*color1: #D64541
-*color9: #E74C3C
-*color2: #1793D1
-*color10: #addef6
-*color3: #F7CA18
-*color11: #F5D76E
-*color4: #4183D7
-*color12: #59ABE3
-*color5: #8E44AD
-*color13: #9B59B6
-*color6: #6BB9F0
-*color14: #89C4F4
-*color7: #BDC3C7
-*color15: #ececec
-
-!-- Xft settings -- !
-Xft.dpi:        100
-Xft.antialias:  true
-Xft.rgba:       rgb
-Xft.hinting:    true
-Xft.hinstyle:   full
-
-rofi.font:        hermit 14
+rofi.font:        hermit 12
 rofi.forebackground: #FFFFFF
 rofi.background:     #000000
 

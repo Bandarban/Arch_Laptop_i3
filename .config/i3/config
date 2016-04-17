@@ -32,7 +32,8 @@ font pango:Inconsolata Bold 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+#bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec xfce4-terminal 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -210,7 +211,7 @@ bindsym Mod1+Shift+h exec scrot
 exec_always feh --bg-fill ~/Pictures/baymax.png
 exec --no-startup-id nm-applet
 exec --no-startup-id volwheel
-exec_always --no-startup-id xcompmgr -c 
+exec_always --no-startup-id compton 
 exec --no-startup-id mpd
 exec_always --no-startup-id xrdb /home/naildownx/xresourcesback
 new_window pixel
